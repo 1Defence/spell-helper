@@ -1,2 +1,2 @@
-# Example
-An example greeter plugin
+# Spell Helper
+Prevents misclicks on limited spells(xfer,potshare,heal other,telegrab)
