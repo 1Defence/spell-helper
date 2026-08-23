@@ -31,5 +31,20 @@ import net.runelite.client.config.ConfigItem;
 @ConfigGroup("spellhelper")
 public interface SpellHelperConfig extends Config
 {
+    String CONFIG_GROUP = "spellhelper";
+    @ConfigItem(
+            keyName = "removeMessage",
+            name = "Remove Message(read)",
+            description = "This plugin consumes up to 2 misclicks of valid spells (potshare,heal other,spec xfer,telegrab) to prevent unintentional user-confusion on spells not going through set this field to \"i understand\" without quotes to remove the game message",
+            position = 0
+    )
+    default String removeMessage() { return ""; }
 
+    @ConfigItem(
+            keyName = "removeSound",
+            name = "Remove Sound(read)",
+            description = "This plugin consumes up to 2 misclicks of valid spells (potshare,heal other,spec xfer,telegrab) to prevent unintentional user-confusion on spells not going through set this field to \"i understand\" without quotes to remove the game sound",
+            position = 0
+    )
+    default String removeSound() { return ""; }
 }
